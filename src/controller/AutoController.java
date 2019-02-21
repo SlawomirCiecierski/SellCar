@@ -28,7 +28,7 @@ public class AutoController {
             System.out.println(auto);
         }
     }
-
+//HOMEWORK
     public boolean deleteOrderedCar(String vin){
 
         for (int i=0; i<ordered_autos.size();i++){
@@ -45,5 +45,5 @@ public class AutoController {
         System.out.println("          ---===>Zamówienia nie usunięto. Brak samochodu?<===---");
         return false;
     }
-
+//HOMEWORK
 }
