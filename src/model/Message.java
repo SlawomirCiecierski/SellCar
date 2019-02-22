@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Message {
     String content;
@@ -15,7 +16,10 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Wiadomość od: " + author + " odebrana : " + dateTime + " o treści: " + content;
+        String pattern="HH:mm:ss dd.MM.yyyy";
+        DateTimeFormatter dtf=DateTimeFormatter.ofPattern(pattern);
+        //data w określonym formacie
+        return "Wiadomość od: " + author + " odebrana : " + dateTime.format(dtf) + "r. o treści: " + content;
     }
 
     public void setContent(String content) {
